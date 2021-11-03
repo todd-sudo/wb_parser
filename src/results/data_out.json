@@ -1,0 +1,38 @@
+[
+    {
+        "8279056": {
+            "price": 640,
+            "sale": 51,
+            "basicSale": 30,
+            "basicPrice": 448,
+            "promoSale": 30,
+            "promoPrice": 313,
+            "CustomerSale": "",
+            "CustomerPrice": ""
+        }
+    },
+    {
+        "10899304": {
+            "price": 3300,
+            "sale": 62,
+            "basicSale": 40,
+            "basicPrice": 1980,
+            "promoSale": 37,
+            "promoPrice": 1247,
+            "CustomerSale": "",
+            "CustomerPrice": ""
+        }
+    },
+    {
+        "8576622": {
+            "price": 4985,
+            "sale": 73,
+            "basicSale": 46,
+            "basicPrice": 2691,
+            "promoSale": 45,
+            "promoPrice": 1480,
+            "CustomerSale": 12,
+            "CustomerPrice": 1302
+        }
+    }
+]

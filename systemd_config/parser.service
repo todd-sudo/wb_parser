@@ -1,0 +1,10 @@
+[Unit]
+Description=Wildberries Parser
+After=multi-user.target
+
+[Service]
+WorkingDirectory=/home/todd/Документы/wb_parser
+ExecStart=/home/todd/Документы/wb_parser/run.sh
+
+[Install]
+WantedBy=multi-user.target
