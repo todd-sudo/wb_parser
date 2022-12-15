@@ -5,7 +5,7 @@ DJANGO_SETTINGS_MODULE=config.settings.production
 DJANGO_SECRET_KEY=d8C2tYAfsRUUp2LhDsSn6M1AM8KK8IJeOdhJKBBTiZl7aEP2vmH2sduvbsDx4DoX
 DJANGO_ADMIN_URL=admin/
 
-DJANGO_ALLOWED_HOSTS=.45.159.18.95
+DJANGO_ALLOWED_HOSTS=.example.com
 
 # Security
 # ------------------------------------------------------------------------------
@@ -46,5 +46,5 @@ PERCENTAGE_MAX = 5
 RETRIEVE_LIMIT_PRICES = 20
 
 # Example https://domain_name.ru
-SWAGGER_PRODUCTION_HOST=https://45.159.18.95
+SWAGGER_PRODUCTION_HOST=https://domain_name.ru
 
