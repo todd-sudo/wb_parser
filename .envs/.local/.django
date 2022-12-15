@@ -1,0 +1,23 @@
+# General
+# ------------------------------------------------------------------------------
+USE_DOCKER=yes
+IPYTHONDIR=/app/.ipython
+# Redis
+# ------------------------------------------------------------------------------
+REDIS_URL=redis://redis:6379/0
+
+# Celery
+# ------------------------------------------------------------------------------
+
+# Flower
+CELERY_FLOWER_USER=FjLDDQHZVbOOylhIUOTOdmjIBVCMbcYk
+CELERY_FLOWER_PASSWORD=0phNpRlqrgn5Pp1s3wqDC0qCkLSCv7Hlyy46ptlb2zhrgmGbpgj75A9unMi63xbO
+
+
+TELEGRAM_API_KEY=5148986548:AAHk0jNFuwPiMnKV8vv6FNybw26Ujj19N2Q
+TELEGRAM_CHAT_ID=-825600262
+
+PERCENTAGE_MIN = -5
+PERCENTAGE_MAX = 5
+
+RETRIEVE_LIMIT_PRICES = 20

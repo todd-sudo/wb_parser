@@ -1,0 +1,71 @@
+version: '3'
+
+volumes:
+  wb_parser_local_postgres_data: {}
+  wb_parser_local_postgres_data_backups: {}
+  app_media: {}
+
+services:
+  django: &django
+    build:
+      context: .
+      dockerfile: ./compose/local/django/Dockerfile
+    image: wb_parser_local_django
+    container_name: wb_parser_local_django
+    depends_on:
+      - postgres
+      - redis
+    volumes:
+      - .:/app:z
+      - app_media:/app/wb_parser/media:z
+    env_file:
+      - ./.envs/.local/.django
+      - ./.envs/.local/.postgres
+    ports:
+      - "8000:8000"
+    command: /start
+
+  postgres:
+    build:
+      context: .
+      dockerfile: ./compose/production/postgres/Dockerfile
+    image: wb_parser_production_postgres
+    container_name: wb_parser_local_postgres
+    volumes:
+      - wb_parser_local_postgres_data:/var/lib/postgresql/data:Z
+      - wb_parser_local_postgres_data_backups:/backups:z
+    env_file:
+      - ./.envs/.local/.postgres
+    command: postgres -c 'max_connections=2000'
+
+  redis:
+    image: redis:6
+    container_name: wb_parser_local_redis
+
+  celeryworker:
+    <<: *django
+    image: wb_parser_local_celeryworker
+    container_name: wb_parser_local_celeryworker
+    depends_on:
+      - redis
+      - postgres
+    ports: []
+    command: /start-celeryworker
+
+  celerybeat:
+    <<: *django
+    image: wb_parser_local_celerybeat
+    container_name: wb_parser_local_celerybeat
+    depends_on:
+      - redis
+      - postgres
+    ports: []
+    command: /start-celerybeat
+
+  flower:
+    <<: *django
+    image: wb_parser_local_flower
+    container_name: wb_parser_local_flower
+    ports:
+      - "5555:5555"
+    command: /start-flower

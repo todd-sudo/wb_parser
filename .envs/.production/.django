@@ -1,0 +1,50 @@
+# General
+# ------------------------------------------------------------------------------
+# DJANGO_READ_DOT_ENV_FILE=True
+DJANGO_SETTINGS_MODULE=config.settings.production
+DJANGO_SECRET_KEY=d8C2tYAfsRUUp2LhDsSn6M1AM8KK8IJeOdhJKBBTiZl7aEP2vmH2sduvbsDx4DoX
+DJANGO_ADMIN_URL=admin/
+
+DJANGO_ALLOWED_HOSTS=.45.159.18.95
+
+# Security
+# ------------------------------------------------------------------------------
+# TIP: better off using DNS, however, redirect is OK too
+DJANGO_SECURE_SSL_REDIRECT=False
+
+# Email
+# ------------------------------------------------------------------------------
+DJANGO_SERVER_EMAIL=
+
+
+# django-allauth
+# ------------------------------------------------------------------------------
+DJANGO_ACCOUNT_ALLOW_REGISTRATION=True
+
+# Gunicorn
+# ------------------------------------------------------------------------------
+WEB_CONCURRENCY=4
+
+
+# Redis
+# ------------------------------------------------------------------------------
+REDIS_URL=redis://redis:6379/0
+
+# Celery
+# ------------------------------------------------------------------------------
+
+# Flower
+CELERY_FLOWER_USER=FjLDDQHZVbOOylhIUOTOdmjIBVCMbcYk
+CELERY_FLOWER_PASSWORD=HTx0q8WrKBIVSDdeRIWCwYWT4RRNIddaWYCtjNw1BLw9qEjtjunw74KbQQgjYzaT
+
+TELEGRAM_API_KEY=5148986548:AAHk0jNFuwPiMnKV8vv6FNybw26Ujj19N2Q
+TELEGRAM_CHAT_ID=-825600262
+
+PERCENTAGE_MIN = -5
+PERCENTAGE_MAX = 5
+
+RETRIEVE_LIMIT_PRICES = 20
+
+# Example https://domain_name.ru
+SWAGGER_PRODUCTION_HOST=https://45.159.18.95
+
